@@ -106,4 +106,6 @@ public class Candidate implements Serializable {
         this.experiences = experiences;
     }
 
+
+
 }

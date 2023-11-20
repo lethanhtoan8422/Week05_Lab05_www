@@ -61,7 +61,11 @@ const Home = () => {
       <div className="pages">
         {
           totalPages.map(page => (
-            <button key={page} onClick={() => setPageChosen(page-1)}>{page}</button>
+            <button key={page} onClick={() => setPageChosen(page-1)}
+            style={{
+              backgroundColor : page-1===pageChosen ? "yellow" : 'transparent'
+            }}
+            >{page}</button>
           ))
         }
       </div>

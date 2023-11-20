@@ -20,8 +20,22 @@ import java.util.List;
 public class CompanyController {
     @Autowired
     private CompanyService companyService;
-    @Autowired
-    private CandidateService candidateService;
+
+    @PostMapping
+    public boolean create(@RequestBody Company company){
+        return companyService.create(company) != null;
+    }
+
+    @PutMapping
+    public boolean update(@RequestBody Company company){
+        return companyService.update(company) != null;
+    }
+
+    @DeleteMapping("/{id}")
+    public boolean delete(@PathVariable("id") long id){
+        companyService.delete(id);
+        return true;
+    }
 
     @GetMapping("/{id}")
     public Company getByID(@PathVariable("id") long id){

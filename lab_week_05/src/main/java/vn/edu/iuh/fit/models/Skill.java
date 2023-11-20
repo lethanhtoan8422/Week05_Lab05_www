@@ -74,4 +74,6 @@ public class Skill implements Serializable {
         this.jobSkills = jobSkills;
     }
 
+
+
 }

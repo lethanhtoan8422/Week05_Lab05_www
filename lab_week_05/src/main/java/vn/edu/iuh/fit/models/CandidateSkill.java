@@ -2,10 +2,12 @@ package vn.edu.iuh.fit.models;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import vn.edu.iuh.fit.entityID.CandidateSkillID;
 
 import java.io.Serializable;
 
 @Entity
+@IdClass(CandidateSkillID.class)
 @Table(name = "candidate_skill")
 public class CandidateSkill implements Serializable {
     @Id
@@ -63,5 +65,7 @@ public class CandidateSkill implements Serializable {
     public void setMoreInfo(String moreInfo) {
         this.moreInfo = moreInfo;
     }
+
+
 
 }

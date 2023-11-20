@@ -2,10 +2,12 @@ package vn.edu.iuh.fit.models;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import vn.edu.iuh.fit.entityID.JobSkillID;
 
 import java.io.Serializable;
 
 @Entity
+@IdClass(JobSkillID.class)
 @Table(name = "job_skill")
 public class JobSkill implements Serializable {
     @Id

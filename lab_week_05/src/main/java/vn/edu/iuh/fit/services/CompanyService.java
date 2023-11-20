@@ -21,6 +21,18 @@ public class CompanyService {
     @Autowired
     private SkillRepository skillRepository;
 
+    public Company create(Company company){
+        return companyRepository.save(company);
+    }
+
+    public Company update(Company company){
+        return companyRepository.save(company);
+    }
+
+    public void delete(long id){
+        companyRepository.deleteById(id);
+    }
+
     public Company getByID(long id){
         return companyRepository.findById(id).get();
     }
